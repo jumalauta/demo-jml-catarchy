@@ -1,5 +1,5 @@
-Demo.prototype.sceneCat1 = function () {
-    this.setScene('cat1');
+Demo.prototype.sceneCat3 = function () {
+    this.setScene('cat3');
 
       this.loader.addAnimation([{
       image: { name: 'scenes/pikka1.png'},

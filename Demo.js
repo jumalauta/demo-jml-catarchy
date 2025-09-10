@@ -5,7 +5,7 @@ window.camPosLength = 1.0;
 window.camFov = 0.0;
 window.beat = 60 / 160;
 window.tick = window.beat / 6;
-window.pattern = window.beat * 4;
+window.pattern = window.beat * 8;
 window.camNear = 0.0;
 window.camFar = 0.0;
 window.globalTime = 0.0;
@@ -127,43 +127,15 @@ includeFile('multiSceneEffects/particleStream.js');
 includeFile('multiSceneEffects/EffectStarfield.js');
 includeFile('multiSceneEffects/basicText.js');
 includeFile('background/background1.js');
-includeFile('foreground/foregroundeye.js');
-includeFile('foreground/foregroundgear.js');
-includeFile('foreground/foregroundspikeball.js');
-includeFile('foreground/foregroundjing.js');
-includeFile('foreground/foregroundjing.js');
-includeFile('foreground/foregrounddollarcoin.js');
-includeFile('foreground/foregroundpeace.js');
-includeFile('foreground/foregroundmultigear.js');
-includeFile('foreground/foregroundpenta.js');
-includeFile('foreground/statueofliberty.js');
-includeFile('foreground/explosion1.js');
-
-includeFile('foreground/destroy.js')
-includeFile('foreground/flesh.js')
-
-includeFile('foreground/love.js')
-includeFile('foreground/fatherland.js')
-
-includeFile('foreground/eat.js')
-includeFile('foreground/children.js')
-
-includeFile('foreground/kill.js')
-includeFile('foreground/emperor.js')
-
-includeFile('foreground/worship.js')
-includeFile('foreground/money.js')
-
-includeFile('foreground/crush.js')
-includeFile('foreground/hope.js')
-
-includeFile('foreground/increase.js')
-includeFile('foreground/profit.js')
-
-includeFile('foreground/taste.js')
-includeFile('foreground/blood.js')
-
-
+includeFile('scenes/catscene1.js');
+includeFile('scenes/catscene2.js');
+includeFile('scenes/catscene3.js');
+includeFile('scenes/catscene4.js');
+includeFile('scenes/catscene5.js');
+includeFile('scenes/catscene6.js');
+includeFile('scenes/catscene7.js');
+includeFile('scenes/catscene8.js');
+includeFile('scenes/catscene9.js');
 
 Demo.prototype.init = function () {
     console.log('LOL:' + new Error('stackformat').stack);
@@ -174,32 +146,15 @@ Demo.prototype.init = function () {
     const pattern = beat * 8;
 
     this.sceneBackground1();
-    this.sceneForegroundEye();
-    this.sceneForegroundGear();
-    this.sceneForegroundSpikeball();
-    this.sceneForegroundJing();
-    this.sceneForegroundMultiGear();
-    this.sceneForegroundDollarCoin();
-    this.sceneForegroundPenta();
-    this.sceneForegroundPeace();
-    this.sceneExplosion1();    
-    this.sceneStatueOfLiberty();
-
-    this.destroy();
-    this.flesh();
-    this.love();
-    this.fatherland();
-    this.eat();
-    this.children();
-    this.kill();
-    this.emperor();
-    this.worship();
-    this.money();
-    this.crush();
-    this.hope();
-    this.increase();
-    this.profit();
-
+    this.sceneCat1();
+    this.sceneCat2();
+    this.sceneCat3();
+    this.sceneCat4();
+    this.sceneCat5();
+    this.sceneCat6();
+    this.sceneCat7();
+    this.sceneCat8();
+    this.sceneCat9();
 
     this.loader.setScene('main');
 
@@ -207,45 +162,15 @@ Demo.prototype.init = function () {
     const scenes = [
         { start: 0, duration: 120, name: 'background1', bg: true, },
         
-        { start: 0, duration: 8-overflow, name: 'destroy', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 0, duration: 8, name: 'flesh', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 8-overflow, duration: 8, name: 'love', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 8, duration: 8, name: 'fatherland', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 16-overflow, duration: 8, name: 'eat', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 16, duration: 8, name: 'children', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 24-overflow, duration: 8, name: 'kill', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 24, duration: 8, name: 'emperor', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 32-overflow, duration: 8, name: 'worship', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 32, duration: 8, name: 'money', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 40-overflow, duration: 8, name: 'crush', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 40, duration: 8, name: 'hope', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 48-overflow, duration: 8, name: 'increase', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 48, duration: 8, name: 'profit', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-
-        { start: 56-overflow, duration: 8, name: 'destroy', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 56, duration: 8, name: 'fatherland', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 64-overflow, duration: 8, name: 'love', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 64, duration: 8, name: 'money', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 72-overflow, duration: 8, name: 'kill', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 72, duration: 8, name: 'flesh', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 80-overflow, duration: 8, name: 'worship', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 80, duration: 8, name: 'hope', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 88-overflow, duration: 8, name: 'crush', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 88, duration: 8, name: 'profit', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 96-overflow, duration: 8, name: 'increase', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 96, duration: 8, name: 'emperor', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-        { start: 104-overflow, duration: 8, name: 'eat', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-        { start: 104, duration: 8, name: 'fatherland', bg: false, invertFade: false, fade: () => Sync.get('Fade1') },
-
-        { start: 112-overflow, duration: 8, name: 'foregroundJing', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-
-        { start: 120-overflow, duration: 8, name: 'foregroundJing', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-
-        { start: 128-overflow, duration: 8, name: 'foregroundJing', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-
-        { start: 136-overflow, duration: 8, name: 'foregroundJing', bg: false, invertFade: true, fade: () => Sync.get('Fade1') },
-
-
+        { start: 0, duration: 4*window.pattern, name: 'cat1', bg: false },
+        { start: 5*window.pattern, duration: 4*window.pattern, name: 'cat2', bg: false },
+        { start: 9*window.pattern, duration: 4*window.pattern, name: 'cat3', bg: false },
+        { start: 13*window.pattern, duration: 8*window.pattern, name: 'cat4', bg: false },      
+        { start: 21*window.pattern, duration: 4*window.pattern, name: 'cat5', bg: false },
+        { start: 25*window.pattern, duration: 4*window.pattern, name: 'cat6', bg: false },
+        { start: 29*window.pattern, duration: 4*window.pattern, name: 'cat7', bg: false },
+        { start: 33*window.pattern, duration: 4*window.pattern, name: 'cat8', bg: false },
+        { start: 37*window.pattern, duration: 8*window.pattern, name: 'cat9', bg: false },   
     ];
 
     scenes.forEach((scene) => {
@@ -257,17 +182,6 @@ Demo.prototype.init = function () {
         if (!scene.bg) {
             this.loader.addAnimation({
                 start: scene.start, duration: scene.duration, color: scene.color, image: scene.name + 'Fbo.color.fbo',
-                shader:
-                {
-                    name: 'multiSceneEffects/gridfade.fs',
-                    variable: [
-                        { "name": "fade", "value": [scene.fade] },
-                        { "name": "invert", "value": [scene.invertFade] },
-                        { "name": "gridx", "value": [6] },
-                        { "name": "gridy", "value": [240] },
-                        { "name": "seed", "value": [100] }
-                    ]
-                }
             });
         }
     });
