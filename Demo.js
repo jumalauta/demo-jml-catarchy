@@ -162,15 +162,15 @@ Demo.prototype.init = function () {
     const scenes = [
         { start: 0, duration: 120, name: 'background1', bg: true, },
         
-        { start: 0, duration: 4*window.pattern, name: 'cat1', bg: false },
+        { start: 0, duration: 5*window.pattern, name: 'cat1', bg: false },
         { start: 5*window.pattern, duration: 4*window.pattern, name: 'cat2', bg: false },
         { start: 9*window.pattern, duration: 4*window.pattern, name: 'cat3', bg: false },
         { start: 13*window.pattern, duration: 8*window.pattern, name: 'cat4', bg: false },      
         { start: 21*window.pattern, duration: 4*window.pattern, name: 'cat5', bg: false },
-        { start: 25*window.pattern, duration: 4*window.pattern, name: 'cat6', bg: false },
-        { start: 29*window.pattern, duration: 4*window.pattern, name: 'cat7', bg: false },
-        { start: 33*window.pattern, duration: 4*window.pattern, name: 'cat8', bg: false },
-        { start: 37*window.pattern, duration: 8*window.pattern, name: 'cat9', bg: false },   
+        { start: 25*window.pattern, duration: 2*window.pattern, name: 'cat6', bg: false },
+        { start: 27*window.pattern, duration: 4*window.pattern, name: 'cat7', bg: false },
+        { start: 31*window.pattern, duration: 4*window.pattern, name: 'cat8', bg: false },
+        { start: 35*window.pattern, duration: 8*window.pattern, name: 'cat9', bg: false },   
     ];
 
     scenes.forEach((scene) => {

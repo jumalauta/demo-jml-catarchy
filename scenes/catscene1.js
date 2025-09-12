@@ -1,16 +1,12 @@
 Demo.prototype.sceneCat1 = function () {
     this.setScene('cat1');
 
-      this.loader.addAnimation([{
-      image: { name: 'scenes/pikka1.png'},
-      perspective: '3d',
-      position:[{
-        x:()=>Math.sin(getSceneTimeFromStart()*2),
-        y:()=>.5*Math.cos(getSceneTimeFromStart()*2)+getSceneTimeFromStart()%window.beat,
-        z:0}],
-      scale:[{"uniform3d":()=>Sync.get('Foreground:scale2')}],
-      color:[{"r":1.0,"g":0.1,"b":0.1,"a":1.0}],
-    }]);
 
-    this.basicText({text:"Meow",x:0,y:0,scale:6.0, start:0, duration: 100});
+
+    this.basicText({text:"MEOW",x:0,y:0,scale:6.0, start:0, duration: window.pattern});
+    this.basicText({text:"JUMALAUTA",x:0,y:0,scale:6.0, start:window.pattern, duration: window.pattern});
+    this.basicText({text:"PRESENTS",x:0,y:0,scale:6.0, start:window.pattern*2, duration: window.pattern});
+    this.basicText({text:"FELES",x:0,y:0.35,scale:6.0, start:window.pattern*3, duration: 2*window.pattern});
+    this.basicText({text:"CONTRA",x:0,y:0,scale:6.0, start:window.pattern*3, duration: 2*window.pattern});
+    this.basicText({text:"OMNIA",x:0,y:-0.35,scale:6.0, start:window.pattern*3, duration: 2*window.pattern});        
 }
