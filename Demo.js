@@ -136,6 +136,7 @@ includeFile('scenes/catscene6.js');
 includeFile('scenes/catscene7.js');
 includeFile('scenes/catscene8.js');
 includeFile('scenes/catscene9.js');
+includeFile('scenes/foreground.js');
 
 Demo.prototype.init = function () {
     console.log('LOL:' + new Error('stackformat').stack);
@@ -155,6 +156,7 @@ Demo.prototype.init = function () {
     this.sceneCat7();
     this.sceneCat8();
     this.sceneCat9();
+    this.sceneForeground();
 
     this.loader.setScene('main');
 
@@ -171,7 +173,8 @@ Demo.prototype.init = function () {
         { start: 27*window.pattern, duration: 4*window.pattern, name: 'cat7', bg: false },
         { start: 31*window.pattern, duration: 4*window.pattern, name: 'cat8', bg: false },
         { start: 35*window.pattern, duration: 8*window.pattern, name: 'cat9', bg: false },   
-    ];
+        { start: 0, duration: 120, name: 'foreground', bg: false, },
+        ];
 
     scenes.forEach((scene) => {
         this.loader.addAnimation({ start: scene.start, duration: scene.duration, scene: { name: scene.name, fbo: { name: scene.name + 'Fbo' } }, ...(scene.parameters || {}) });

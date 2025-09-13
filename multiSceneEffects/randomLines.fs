@@ -38,7 +38,7 @@ vec2 pixelize(vec2 st, float pixels)
 }
 
 void main() {
-
+//fragColor = vec4(1.0,0.0,0.0,1.0); return;
     float spectogramThreshold = 0.4;
     vec2 spectogramCoord = vec2(timePercent, 0.05);
     vec4 spectogramColorPoint = texture(texture1, spectogramCoord);
@@ -55,11 +55,11 @@ void main() {
         vec2 st = pixelize(texCoord, pixels[i]);
         float vertical = rands(vec2(st.x, t), pixels[i]);
         float horizontal = rands(vec2(t, st.y), pixels[i]);
-        if (vertical < 0.01) {
-            finalColor += vec4(0.25);
+        if (vertical < 0.02) {
+            finalColor += vec4(0.4);
         }
-        if (horizontal < 0.01) {
-            finalColor += vec4(0.25);
+        if (horizontal < 0.02) {
+            finalColor += vec4(0.4);
         }
     }
 
