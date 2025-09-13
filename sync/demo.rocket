@@ -2301,6 +2301,72 @@
 			<key value="0" row="832" interpolation="0"/>
 			<key value="1" row="1088" interpolation="0"/>
 		</track>
+		<track name="Tunnel:vis"/>
+		<track name="Tunnel:t1vis"/>
+		<track name="Paw:angle">
+			<key value="-25" row="580" interpolation="1"/>
+			<key value="15" row="592" interpolation="1"/>
+			<key value="45" row="604" interpolation="1"/>
+			<key value="-25" row="616" interpolation="1"/>
+			<key value="5" row="628" interpolation="0"/>
+			<key value="5" row="630" interpolation="1"/>
+			<key value="-15" row="640" interpolation="1"/>
+			<key value="-25" row="648" interpolation="0"/>
+			<key value="-25" row="708" interpolation="1"/>
+			<key value="15" row="720" interpolation="1"/>
+			<key value="45" row="732" interpolation="1"/>
+			<key value="-25" row="744" interpolation="1"/>
+			<key value="5" row="756" interpolation="0"/>
+			<key value="5" row="758" interpolation="1"/>
+			<key value="-15" row="768" interpolation="1"/>
+			<key value="-25" row="776" interpolation="0"/>
+		</track>
+		<track name="Paw:x">
+			<key value="0" row="576" interpolation="0"/>
+			<key value="-0.25" row="592" interpolation="3"/>
+			<key value="0" row="595" interpolation="1"/>
+			<key value="1.2" row="603" interpolation="0"/>
+			<key value="1" row="604" interpolation="0"/>
+			<key value="1" row="606" interpolation="0"/>
+			<key value="-1" row="616" interpolation="0"/>
+			<key value="1" row="628" interpolation="0"/>
+			<key value="0" row="648" interpolation="0"/>
+			<key value="0" row="704" interpolation="0"/>
+			<key value="-0.25" row="720" interpolation="3"/>
+			<key value="0" row="723" interpolation="1"/>
+			<key value="1.2" row="731" interpolation="0"/>
+			<key value="1" row="732" interpolation="0"/>
+			<key value="1" row="734" interpolation="0"/>
+			<key value="-1" row="744" interpolation="0"/>
+			<key value="1" row="756" interpolation="0"/>
+			<key value="0" row="776" interpolation="0"/>
+		</track>
+		<track name="Paw:y">
+			<key value="-5" row="576" interpolation="0"/>
+			<key value="-3.5" row="580" interpolation="1"/>
+			<key value="-1" row="582" interpolation="1"/>
+			<key value="-3.5" row="592" interpolation="1"/>
+			<key value="-1" row="594" interpolation="1"/>
+			<key value="-3.5" row="604" interpolation="1"/>
+			<key value="-0.5" row="607" interpolation="2"/>
+			<key value="-3.5" row="616" interpolation="1"/>
+			<key value="-0.5" row="618" interpolation="1"/>
+			<key value="-3.5" row="628" interpolation="1"/>
+			<key value="-1" row="630" interpolation="1"/>
+			<key value="-3.5" row="648" interpolation="0"/>
+			<key value="-5" row="704" interpolation="0"/>
+			<key value="-3.5" row="708" interpolation="1"/>
+			<key value="-1" row="710" interpolation="1"/>
+			<key value="-3.5" row="720" interpolation="1"/>
+			<key value="-1" row="722" interpolation="1"/>
+			<key value="-3.5" row="732" interpolation="1"/>
+			<key value="-0.5" row="735" interpolation="2"/>
+			<key value="-3.5" row="744" interpolation="1"/>
+			<key value="-0.5" row="746" interpolation="1"/>
+			<key value="-3.5" row="756" interpolation="1"/>
+			<key value="-1" row="758" interpolation="1"/>
+			<key value="-3.5" row="776" interpolation="0"/>
+		</track>
 	</tracks>
 	<bookmarks>
 		<bookmark row="1088"/>
