@@ -22,15 +22,16 @@ Demo.prototype.sceneCat9 = function () {
     id: "catbody",
     parent: "skateboard",
     object: {
-      "name": "scenes/catbody_normal.obj"
+      "name": "scenes/catbody_sitting.obj"
     }
     , position: [{
       x: 0,
-      y: () => .5 + Sync.get('Cat:Jump') * (-.5 + 1.3 + Math.sin((getSceneTimeFromStart() * 16))),
+      y: () => .15,
       z: 0
     }]
     , scale: [{ "uniform3d": 1 }]
     , angle: [{
+      degreesX:10 
     }]
   }]);
 
@@ -42,8 +43,8 @@ Demo.prototype.sceneCat9 = function () {
     }
     , position: [{
       x: 0,
-      y: 3,
-      z: 2
+      y: 4.5,
+      z: -.5
     }]
     , scale: [{ "uniform3d": 1 }]
     , angle: [{
@@ -52,5 +53,42 @@ Demo.prototype.sceneCat9 = function () {
       degreesZ: () => 0,
     }]
   }]);
+
+  this.loader.addAnimation([{
+    parent: "catbody",
+    object: {
+      "name": "multiSceneEffects/obj_ak.obj"
+    }
+    , position: [{
+      x: 1,
+      y: 3,
+      z: 1
+    }]
+    , scale: [{ "uniform3d": 1 }]
+    , angle: [{
+      degreesX: () => Math.sin(5 * getSceneTimeFromStart()),
+      degreesY: () => 90 +5*Math.sin(5 * getSceneTimeFromStart()),
+      degreesZ: () => 0,
+    }]
+  }]);  
+
+  this.loader.addAnimation([{
+    parent: "catbody",
+    object: {
+      "name": "multiSceneEffects/obj_ak.obj"
+    }
+    , position: [{
+      x: -1,
+      y: 3,
+      z: 1
+    }]
+    , scale: [{ "uniform3d": 1 }]
+    , angle: [{
+      degreesX: () => Math.sin(5 * (getSceneTimeFromStart()+.5)),
+      degreesY: () => 90 +5*Math.sin(5 * (getSceneTimeFromStart()+.5)),
+      degreesZ: () => 0,
+    }]
+  }]);  
+
     this.basicText({text:"Meow",x:0,y:0,scale:6.0, start:0, duration: 100});
 }
