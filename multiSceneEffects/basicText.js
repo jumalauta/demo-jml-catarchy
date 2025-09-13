@@ -1,5 +1,6 @@
 Demo.prototype.basicText = function (props)
 {
+  
   if(props.a == undefined) props.a = 1.0;
   if(props.y == undefined) props.y = 0;
   this.loader.addAnimation([{
@@ -12,7 +13,7 @@ Demo.prototype.basicText = function (props)
         y:props.y,
         z:2},
        {duration:9},{y:0}],
-      scale: [{ uniform3d: 2.9 }],
+      scale: [{ uniform3d: 2.4 }],
     material:{
       blending: 'NormalBlending',
       transparent:true,
@@ -50,11 +51,12 @@ Demo.prototype.flashText = function (texts, start, dur)
   this.loader.addAnimation({
     start:start, duration:dur,
     prevTime:0,
-    currentlyVisible:0,
+    currentlyVisible:texts.length,
     runFunction:(animation)=>{
+    
         if(getSceneTimeFromStart() > animation.prevTime)
         {
-          animation.prevTime = getSceneTimeFromStart()+.4;
+          animation.prevTime = getSceneTimeFromStart()+.2;
           animation.currentlyVisible++;
           if(animation.currentlyVisible > texts.length-1)
           {

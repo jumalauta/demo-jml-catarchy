@@ -1,6 +1,8 @@
 Demo.prototype.sceneCat9 = function () {
     this.setScene('cat9');
 
+
+
   this.loader.addAnimation([{
     id: "skateboard",
     object: {
@@ -14,7 +16,7 @@ Demo.prototype.sceneCat9 = function () {
     , scale: [{ "uniform3d": 1 }]
     , angle: [{
 
-      degreesY: () => -90 + 15 * Math.sin(2 * getSceneTimeFromStart()),
+      degreesY: () => Sync.get('Skateboard:catRotY') -90 + 15 * Math.sin(2 * getSceneTimeFromStart()),
     }]
   }]);
 
@@ -91,6 +93,7 @@ Demo.prototype.sceneCat9 = function () {
       degreesZ: () => 0,
     }]
   }]);  
+
 
   for (let i = 0; i < 2; i++) {
     const parentId = "ak47_" + (i + 1);

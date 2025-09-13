@@ -57,5 +57,12 @@ Demo.prototype.sceneCat8 = function () {
 
     this.addPointer();
 
-    this.basicText({text:"Purr",x:0,y:0,scale:6.0, start:0, duration: 100});
+
+    this.basicText({text:"DESTROY THEIR",x:0,y:0.35,scale:6.0, start:window.pattern*0, duration: 1.75*window.pattern});
+    this.basicText({text:"DEATH",x:0,y:0,scale:6.0, start:window.pattern*0, duration: 1.75*window.pattern});
+    this.basicText({text:"MACHINE",x:0,y:-0.35 ,scale:6.0, start:window.pattern*0, duration: 1.75*window.pattern});
+
+    this.basicText({text:"BE THE",x:0,y:0.35,scale:6.0, start:window.pattern*2, duration: 1.75*window.pattern});
+    this.basicText({text:"DEATH",x:0,y:0,scale:6.0, start:window.pattern*2, duration: 1.75*window.pattern});
+    this.basicText({text:"MACHINE",x:0,y:-0.35 ,scale:6.0, start:window.pattern*2, duration: 1.75*window.pattern});  
 }

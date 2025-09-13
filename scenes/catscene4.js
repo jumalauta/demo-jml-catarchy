@@ -99,7 +99,7 @@ void drawLaser()
   const particles = new Array(500);
   const lines = particles.length / 2;
   for(let i = 0, j = 0; i < particles.length; j++, i++) {
-    const radius = 5+5*Utils.random();
+    const radius = 15+5*Utils.random();
 
     const randomPoint = Math.floor(Utils.random()*circlePoints);
     const percent1 = randomPoint / circlePoints;
@@ -161,7 +161,7 @@ void drawLaser()
 
           object.position.x = particle.x;
           object.position.y = particle.y;
-          object.position.z = ((getSceneTimeFromStart()*40.0+particle.z)%80.0)+particle.z;
+          object.position.z = ((getSceneTimeFromStart()*80.0+particle.z)%80.0)+particle.z;
 
           const deg2rad = Math.PI / 180;
           properties.angle.degreesX = particle.angle.degreesX * deg2rad;
@@ -198,14 +198,14 @@ Demo.prototype.sceneCat4 = function () {
       "name": "scenes/skateboard.obj"
     }
     , position: [{
-      x: ()=>.3*Math.sin(8*getSceneTimeFromStart()),
+      x: ()=>.3*Math.sin(8*getSceneTimeFromStart())-3,
       y: -3,
       z: -10
     }]
     , scale: [{ "uniform3d": 1 }]
     , angle: [{
 
-      degreesY: () => -90 + 15 * Math.sin(2 * getSceneTimeFromStart()),      
+      degreesY: () => 90 + 15 * Math.sin(2 * getSceneTimeFromStart()),      
     }]
   }]);
 
@@ -243,6 +243,9 @@ Demo.prototype.sceneCat4 = function () {
       degreesZ: () => 0,
     }]
   }]);
-
-  this.basicText({ text: "Purr", x: 0, y: 0, scale: 6.0, start: 0, duration: 100 });
+  this.flashText(['CRUSH', 'THE', 'HETERONORMATIVE', 'STRUCTURES'],0,1*window.pattern);
+  this.flashText(['SMASH', 'THE', 'OPPRESSION'],2*window.pattern,1*window.pattern);
+  this.flashText(['EMBRACE','THE','CHAOS'],4*window.pattern,1*window.pattern);
+  this.flashText(['KILL','THE','IMMORTAL','EMPEROR'],6*window.pattern,1*window.pattern);
+  // this.basicText({ text: "Purr", x: 0, y: 0, scale: 6.0, start: 0, duration: 100 });
 }
