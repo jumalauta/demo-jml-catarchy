@@ -29,6 +29,11 @@ Demo.prototype.basicText = function (props)
           animation.color[0].r = Math.random();
           animation.color[0].g = Math.random();
           animation.color[0].b = Math.random();
+        }  else if (Math.abs(getSceneTimeFromStart()-animation.prevTime) > .5) {
+          // reset state if timer is rewound
+          animation.prevTime = 0;
+          animation.currentlyVisible = 0;
+          
         }
 
     },
@@ -78,6 +83,12 @@ Demo.prototype.flashText = function (texts, start, dur)
 
           window.currentlyVisible = animation.currentlyVisible;
           //console.log("currentlyVisible: " + window.currentlyVisible, " texts.length: " + texts.length);
+        } else if (Math.abs(getSceneTimeFromStart()-animation.prevTime) > .5) {
+          // reset state if timer is rewound
+          animation.prevTime = 0;
+          window.currentlyVisible = 0;
+          animation.currentlyVisible = texts.length;
+
         }
         
 
