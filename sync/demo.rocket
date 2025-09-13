@@ -98,13 +98,18 @@
 		<track name="Cam:Distance">
 			<key value="5" row="0" interpolation="0"/>
 			<key value="18" row="1600" interpolation="0"/>
+			<key value="18" row="1688" interpolation="1"/>
+			<key value="12" row="1727" interpolation="0"/>
 			<key value="5" row="1728" interpolation="0"/>
 			<key value="17" row="2240" interpolation="0"/>
 		</track>
 		<track name="Cam:Yaw">
 			<key value="0" row="0" interpolation="0"/>
-			<key value="180" row="1600" interpolation="1"/>
-			<key value="5" row="1632" interpolation="0"/>
+			<key value="-45" row="1600" interpolation="2"/>
+			<key value="45" row="1632" interpolation="2"/>
+			<key value="-45" row="1664" interpolation="2"/>
+			<key value="45" row="1696" interpolation="2"/>
+			<key value="-44" row="1727" interpolation="0"/>
 			<key value="0" row="1728" interpolation="0"/>
 			<key value="0" row="2240" interpolation="1"/>
 			<key value="1440" row="2496" interpolation="0"/>
@@ -120,7 +125,11 @@
 		</track>
 		<track name="Cam:TargetY">
 			<key value="0" row="0" interpolation="0"/>
-			<key value="3" row="1600" interpolation="0"/>
+			<key value="7" row="1600" interpolation="1"/>
+			<key value="0" row="1632" interpolation="0"/>
+			<key value="0" row="1660" interpolation="3"/>
+			<key value="8" row="1664" interpolation="3"/>
+			<key value="0" row="1696" interpolation="0"/>
 			<key value="0" row="1728" interpolation="0"/>
 		</track>
 		<track name="Cam:TargetZ">
@@ -2367,8 +2376,68 @@
 			<key value="-1" row="758" interpolation="1"/>
 			<key value="-3.5" row="776" interpolation="0"/>
 		</track>
+		<track name="Guillotine:y">
+			<key value="5" row="1600" interpolation="0"/>
+			<key value="5" row="1624" interpolation="3"/>
+			<key value="-2" row="1632" interpolation="0"/>
+			<key value="-2" row="1660" interpolation="3"/>
+			<key value="5" row="1664" interpolation="0"/>
+			<key value="5" row="1688" interpolation="3"/>
+			<key value="-2" row="1696" interpolation="0"/>
+		</track>
+		<track name="Guillotine:putinrot">
+			<key value="0" row="1632" interpolation="1"/>
+			<key value="360" row="1664" interpolation="0"/>
+		</track>
+		<track name="Guillotine:headX">
+			<key value="0" row="1632" interpolation="1"/>
+			<key value="2" row="1633" interpolation="1"/>
+			<key value="4" row="1634" interpolation="1"/>
+			<key value="6" row="1635" interpolation="1"/>
+			<key value="8" row="1636" interpolation="1"/>
+			<key value="10" row="1637" interpolation="1"/>
+			<key value="12" row="1638" interpolation="1"/>
+			<key value="14" row="1639" interpolation="1"/>
+			<key value="16" row="1640" interpolation="1"/>
+			<key value="18" row="1641" interpolation="1"/>
+			<key value="20" row="1642" interpolation="1"/>
+			<key value="22" row="1643" interpolation="1"/>
+			<key value="24" row="1644" interpolation="1"/>
+			<key value="25" row="1664" interpolation="0"/>
+		</track>
+		<track name="Guillotine:headY">
+			<key value="0" row="1632" interpolation="1"/>
+			<key value="5" row="1640" interpolation="1"/>
+			<key value="-6" row="1664" interpolation="0"/>
+		</track>
+		<track name="Guillotine:trumprot"/>
+		<track name="Guillotine:trumpX">
+			<key value="100" row="1600" interpolation="0"/>
+			<key value="0" row="1664" interpolation="0"/>
+			<key value="0" row="1696" interpolation="1"/>
+			<key value="-2" row="1697" interpolation="1"/>
+			<key value="-4" row="1698" interpolation="1"/>
+			<key value="-6" row="1699" interpolation="1"/>
+			<key value="-8" row="1700" interpolation="1"/>
+			<key value="-10" row="1701" interpolation="1"/>
+			<key value="-12" row="1702" interpolation="1"/>
+			<key value="-14" row="1703" interpolation="1"/>
+			<key value="-16" row="1704" interpolation="1"/>
+			<key value="-18" row="1705" interpolation="1"/>
+			<key value="-20" row="1706" interpolation="1"/>
+			<key value="-22" row="1707" interpolation="1"/>
+			<key value="-24" row="1708" interpolation="1"/>
+			<key value="-25" row="1728" interpolation="0"/>
+		</track>
+		<track name="Guillotine:trumpY">
+			<key value="0" row="1664" interpolation="0"/>
+			<key value="0" row="1696" interpolation="1"/>
+			<key value="2" row="1704" interpolation="1"/>
+			<key value="-6" row="1728" interpolation="0"/>
+		</track>
 	</tracks>
 	<bookmarks>
 		<bookmark row="1088"/>
+		<bookmark row="1600"/>
 	</bookmarks>
 </sync>
