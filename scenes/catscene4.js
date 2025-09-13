@@ -95,8 +95,8 @@ void drawLaser()
 
   // lines
 
-  const circlePoints = 40;
-  const particles = new Array(1000);
+  const circlePoints = 20;
+  const particles = new Array(500);
   const lines = particles.length / 2;
   for(let i = 0, j = 0; i < particles.length; j++, i++) {
     const radius = 15+5*Utils.random();
@@ -114,7 +114,7 @@ void drawLaser()
     const interpolatePercent = Utils.random();
     const x = Utils.interpolateLinear(interpolatePercent, x1, x2);
     const y = Utils.interpolateLinear(interpolatePercent, y1, y2);
-    const z = Utils.random() * -50.0 - 30;
+    const z = Utils.random() * -100.0 + 20;
 
     const particle = {
       x: x,
