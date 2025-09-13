@@ -1,4 +1,4 @@
-<sync rows="2560">
+<sync rows="3000">
 	<tracks>
 		<track name="Fade1">
 			<key value="-0.01" row="0" interpolation="2"/>
@@ -93,25 +93,59 @@
 			<key value="0.5" row="0" interpolation="0"/>
 			<key value="1" row="256" interpolation="0"/>
 			<key value="0.25" row="320" interpolation="0"/>
+			<key value="0.25" row="832" interpolation="0"/>
 			<key value="0.5" row="1728" interpolation="0"/>
 		</track>
 		<track name="Cam:Distance">
 			<key value="5" row="0" interpolation="0"/>
+			<key value="15" row="832" interpolation="0"/>
 			<key value="18" row="1600" interpolation="0"/>
 			<key value="18" row="1688" interpolation="1"/>
 			<key value="12" row="1727" interpolation="0"/>
 			<key value="5" row="1728" interpolation="0"/>
-			<key value="17" row="2240" interpolation="0"/>
+			<key value="13" row="2240" interpolation="2"/>
+			<key value="15" row="2248" interpolation="2"/>
+			<key value="13" row="2256" interpolation="2"/>
+			<key value="15" row="2264" interpolation="2"/>
+			<key value="13" row="2272" interpolation="2"/>
+			<key value="15" row="2280" interpolation="2"/>
+			<key value="13" row="2288" interpolation="2"/>
+			<key value="15" row="2296" interpolation="2"/>
+			<key value="13" row="2304" interpolation="2"/>
+			<key value="15" row="2312" interpolation="2"/>
+			<key value="13" row="2320" interpolation="2"/>
+			<key value="15" row="2328" interpolation="2"/>
+			<key value="13" row="2336" interpolation="2"/>
+			<key value="15" row="2344" interpolation="2"/>
+			<key value="13" row="2352" interpolation="2"/>
+			<key value="15" row="2360" interpolation="2"/>
+			<key value="13" row="2368" interpolation="2"/>
+			<key value="15" row="2376" interpolation="2"/>
+			<key value="13" row="2384" interpolation="2"/>
+			<key value="15" row="2392" interpolation="2"/>
+			<key value="13" row="2400" interpolation="2"/>
+			<key value="15" row="2408" interpolation="2"/>
+			<key value="13" row="2416" interpolation="2"/>
+			<key value="15" row="2424" interpolation="2"/>
+			<key value="13" row="2432" interpolation="2"/>
+			<key value="15" row="2440" interpolation="2"/>
+			<key value="13" row="2448" interpolation="2"/>
+			<key value="15" row="2456" interpolation="2"/>
+			<key value="13" row="2464" interpolation="2"/>
+			<key value="15" row="2472" interpolation="2"/>
+			<key value="13" row="2480" interpolation="2"/>
+			<key value="15" row="2488" interpolation="2"/>
 		</track>
 		<track name="Cam:Yaw">
 			<key value="0" row="0" interpolation="0"/>
+			<key value="0" row="832" interpolation="0"/>
 			<key value="-45" row="1600" interpolation="2"/>
 			<key value="45" row="1632" interpolation="2"/>
 			<key value="-45" row="1664" interpolation="2"/>
 			<key value="45" row="1696" interpolation="2"/>
 			<key value="-44" row="1727" interpolation="0"/>
 			<key value="0" row="1728" interpolation="0"/>
-			<key value="0" row="2240" interpolation="1"/>
+			<key value="0" row="2240" interpolation="0"/>
 			<key value="1440" row="2496" interpolation="0"/>
 		</track>
 		<track name="Cam:Pitch">
@@ -125,6 +159,7 @@
 		</track>
 		<track name="Cam:TargetY">
 			<key value="0" row="0" interpolation="0"/>
+			<key value="0" row="832" interpolation="0"/>
 			<key value="7" row="1600" interpolation="1"/>
 			<key value="0" row="1632" interpolation="0"/>
 			<key value="0" row="1660" interpolation="3"/>
@@ -134,6 +169,7 @@
 		</track>
 		<track name="Cam:TargetZ">
 			<key value="0" row="0" interpolation="0"/>
+			<key value="-10" row="832" interpolation="0"/>
 			<key value="-10" row="1600" interpolation="0"/>
 			<key value="0" row="1728" interpolation="0"/>
 			<key value="-10" row="2240" interpolation="0"/>
@@ -2310,8 +2346,26 @@
 			<key value="0" row="832" interpolation="0"/>
 			<key value="1" row="1088" interpolation="0"/>
 		</track>
-		<track name="Tunnel:vis"/>
-		<track name="Tunnel:t1vis"/>
+		<track name="Tunnel:vis">
+			<key value="1" row="832" interpolation="0"/>
+		</track>
+		<track name="Tunnel:t1vis">
+			<key value="1" row="832" interpolation="0"/>
+		</track>
+		<track name="Tunnel:posX"/>
+		<track name="Tunnel:posY"/>
+		<track name="Tunnel:posZ">
+			<key value="-17" row="832" interpolation="0"/>
+		</track>
+		<track name="Tunnel:degX"/>
+		<track name="Tunnel:degY">
+			<key value="-90" row="832" interpolation="0"/>
+			<key value="7200" row="1344" interpolation="0"/>
+		</track>
+		<track name="Tunnel:degZ"/>
+		<track name="Tunnel:scale">
+			<key value="1.5" row="832" interpolation="0"/>
+		</track>
 		<track name="Paw:angle">
 			<key value="-25" row="580" interpolation="1"/>
 			<key value="15" row="592" interpolation="1"/>
@@ -2435,6 +2489,12 @@
 			<key value="2" row="1704" interpolation="1"/>
 			<key value="-6" row="1728" interpolation="0"/>
 		</track>
+		<track name="Skateboard:catRotY">
+			<key value="0" row="2240" interpolation="1"/>
+			<key value="-3600" row="2496" interpolation="0"/>
+		</track>
+		<track name="fireTransition:fireSlide"/>
+		<track name="fireTransition:alpha"/>
 	</tracks>
 	<bookmarks>
 		<bookmark row="1088"/>

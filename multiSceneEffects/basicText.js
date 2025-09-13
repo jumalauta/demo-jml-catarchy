@@ -20,6 +20,18 @@ Demo.prototype.basicText = function (props)
       transparent:true,
       alphaTest:0.01
     },
+    prevTime:0,
+    runFunction:(animation)=>{
+        if(getSceneTimeFromStart() > animation.prevTime)
+        {
+          animation.prevTime = getSceneTimeFromStart()+.05;
+          animation.currentlyVisible++;
+          animation.color[0].r = Math.random();
+          animation.color[0].g = Math.random();
+          animation.color[0].b = Math.random();
+        }
+
+    },
     shader:{
       vertexShaderPrefix:`
 

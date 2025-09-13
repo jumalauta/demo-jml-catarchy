@@ -25,7 +25,7 @@ Demo.prototype.sceneCat5 = function () {
 
 
 
-    this.basicText({text:"Meow",x:0,y:0,scale:6.0, start:0, duration: 100});
+    this.basicText({text:"RESISTANCE",x:0,y:0,scale:6.0, start:0, duration: 100});
 
   this.loader.addAnimation(
     {

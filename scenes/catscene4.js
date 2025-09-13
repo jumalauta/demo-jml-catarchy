@@ -28,7 +28,7 @@ float rand() {
 
 void drawLaser()
 {
-    vec4 color1 = vec4(1.,0.4,0.4,1.);
+    vec4 color1 = vec4(0.1,.4,0.8,1.);
     vec2 coord=vMapUv;
 
     // sin wavy
@@ -56,7 +56,7 @@ void drawLaser()
 
     gl_FragColor.rgba *= color1;
     gl_FragColor.a *= originalAlpha;
-    if (gl_FragColor.r < 0.2) {
+    if (gl_FragColor.b < 0.2) {
       discard;
     }
 
