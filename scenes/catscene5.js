@@ -65,6 +65,9 @@ Demo.prototype.sceneCat5 = function () {
           const z = meshData.mesh[0].position.array[i*3+2];
           const scatter = 0.04;
           particles[i] = {
+            "startX": Utils.random()*10.0 - 5.0,
+            "startY": Utils.random()*10.0 - 5.0,
+            "startZ": Utils.random()*10.0 - 5.0,
             "x": x+Utils.random()*scatter-scatter/2.0,
             "y": y+Utils.random()*scatter-scatter/2.0,
             "z": z+Utils.random()*scatter-scatter/2.0,
@@ -124,9 +127,16 @@ Demo.prototype.sceneCat5 = function () {
 
         //const rotatedPosition = rotateY(particle, -getSceneTimeFromStart()*40);
         const rotatedPosition = particle;
-        object.position.x = rotatedPosition.x;
-        object.position.y = rotatedPosition.y;
-        object.position.z = rotatedPosition.z;
+        const progress = Math.min(time/7.0, 1.0);
+        object.position.x = Utils.interpolate(progress, rotatedPosition.startX, rotatedPosition.x, 0);
+        object.position.y = Utils.interpolate(progress, rotatedPosition.startY, rotatedPosition.y, 0);
+        object.position.z = Utils.interpolate(progress, rotatedPosition.startZ, rotatedPosition.z, 0);
+
+        if (time >= 9.0) {
+          scale = Utils.random() > 0.1 ? scale + Math.sin(i%2 + time * 20.0) * 0.02 : 0.0;
+        } else {
+          scale += Math.sin(i%2 + time * 20.0) * 0.1 * ((1.0-progress)+0.02);
+        }
 
 
         object.scale.x = scale;
