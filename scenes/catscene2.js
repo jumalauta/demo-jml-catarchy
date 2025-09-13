@@ -20,5 +20,7 @@ Demo.prototype.sceneCat2 = function () {
     }]
   }]);
 
-  this.basicText({ text: "Purr", x: 0, y: 0, scale: 6.0, start: 0, duration: 100 });
+  this.flashText(['DESTROY', 'CAPITALIST', 'SYSTEM'],0,1*window.pattern);
+  this.flashText(['DESECRATE', 'THE', 'CONSERVATIVE', 'VALUES'],2*window.pattern,1*window.pattern);
+  //this.basicText({ text: "Purr", x: 0, y: 0, scale: 6.0, start: 0, duration: 100 });
 }
