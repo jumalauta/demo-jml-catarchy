@@ -51,8 +51,21 @@ Demo.prototype.sceneCat8 = function () {
         x:()=>Math.sin(getSceneTimeFromStart()*2),
         y:()=>.5*Math.cos(getSceneTimeFromStart()*2)+getSceneTimeFromStart()%window.beat,
         z:0}],
-      scale:[{"uniform3d":()=>Sync.get('Foreground:scale2')}],
-      color:[{"r":0.1,"g":1.0,"b":1.0,"a":1.0}],
+      scale:[{"uniform3d":()=>Sync.get('Foreground:scale2')*2}],
+      color:[{"r":1.0,"g":1.0,"b":1.0,"a":1.0}],
+      prevTime:0,
+    runFunction:(animation)=>{
+        if(getSceneTimeFromStart() > animation.prevTime)
+        {
+          animation.prevTime = getSceneTimeFromStart()+.05;
+          animation.currentlyVisible++;
+          animation.color[0].r = Math.random();
+          animation.color[0].g = Math.random();
+          animation.color[0].b = Math.random();
+        }
+
+    },
+
     }]);
 
     this.addPointer();

@@ -27,23 +27,23 @@ Demo.prototype.sceneBurn = function () {
     }
   });
 
-    this.loader.addAnimation({
-        image: 'scenes/skyline.png',
-        position:[{x:0.25,y:-0.05},{duration:12,x:-0.25}],
-        color:{r:blackness,g:blackness,b:blackness,a:0.1},
-    shader:{name:"scenes/smoke.fs"
-      ,variable: [
-        {name:"strength",value:[1.0]},
-        {name:"iteration",value:[Utils.random()*30.0]}
-      ]
-      },
-    });
+    this.loader.addAnimation([
+      {
+        image: {
+          name: 'multiSceneEffects/tex_nuke.png'
+        },
+                scale: [{ uniform2d: 2.95 }],
+        perspective: '2d',
+        position: [
+          {
+            x: 0,
+            y: 0,
+            z: 0
+          }
+        ],  
 
-    this.loader.addAnimation({
-        image: 'scenes/skyline.png',
-        position:[{x:0.25,y:-0.05},{duration:12,x:-0.25}],
-        color:{r:blackness+0.15,g:blackness,b:blackness}
-    });
+      }
+    ]);
 
   this.loader.addAnimation({
     image: ['_embedded/defaultTransparent.png', 'scenes/firepattern1.png'],
@@ -56,5 +56,6 @@ Demo.prototype.sceneBurn = function () {
       ]
     }
   });
+
 
 }

@@ -105,6 +105,21 @@ Demo.prototype.addPostProcess = function (image, bypass) {
 
   this.loader.addAnimation({
     image: 'finalFbo.color.fbo',
+    shader: {
+      name: 'multiSceneEffects/colorcycle.fs',
+      variable: [
+        { name: 'shiftHue', value: [() => Sync.get('ColorCycle:Hue')] },
+        {
+          name: 'shiftSaturation',
+          value: [() => Sync.get('ColorCycle:Saturation')] 
+        },
+        { name: 'shiftValue', value: [() => Sync.get('ColorCycle:Shift')] },
+        {
+          name: 'centerize',
+          value: [() => Sync.get('ColorCycle:Centerize')]
+        }
+      ]
+    },
     "position":[{
       "x":()=>(Math.random()*Sync.get('PostProc:Shake'))-0.5*Sync.get('PostProc:Shake'),
       "y":()=>(Math.random()*Sync.get('PostProc:Shake'))-0.5*Sync.get('PostProc:Shake')

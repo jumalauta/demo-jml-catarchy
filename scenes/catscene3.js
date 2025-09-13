@@ -26,5 +26,5 @@ Demo.prototype.sceneCat3 = function () {
         }],
     }]);
 
-    this.basicText({text:"Meow",x:0,y:0,scale:6.0, start:0, duration: 100});
+    this.basicText({text:"Meow The System",x:0,y:()=>Math.sin(getSceneTimeFromStart()),scale:6.0, start:0, duration: 100});
 }

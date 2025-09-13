@@ -702,22 +702,6 @@
 			<key value="1" row="2367" interpolation="0"/>
 			<key value="4" row="2368" interpolation="1"/>
 			<key value="1" row="2375" interpolation="0"/>
-			<key value="4" row="2560" interpolation="1"/>
-			<key value="1" row="2567" interpolation="0"/>
-			<key value="4" row="2568" interpolation="1"/>
-			<key value="1" row="2575" interpolation="0"/>
-			<key value="4" row="2576" interpolation="1"/>
-			<key value="1" row="2583" interpolation="0"/>
-			<key value="4" row="2584" interpolation="1"/>
-			<key value="1" row="2591" interpolation="0"/>
-			<key value="4" row="2592" interpolation="1"/>
-			<key value="1" row="2599" interpolation="0"/>
-			<key value="4" row="2600" interpolation="1"/>
-			<key value="1" row="2607" interpolation="0"/>
-			<key value="4" row="2608" interpolation="1"/>
-			<key value="1" row="2615" interpolation="0"/>
-			<key value="4" row="2616" interpolation="1"/>
-			<key value="1" row="2623" interpolation="0"/>
 		</track>
 		<track name="PostProc:GlowSpread">
 			<key value="4" row="0" interpolation="0"/>
@@ -1211,22 +1195,6 @@
 			<key value="0" row="2367" interpolation="0"/>
 			<key value="1000" row="2368" interpolation="1"/>
 			<key value="0" row="2375" interpolation="0"/>
-			<key value="1000" row="2560" interpolation="1"/>
-			<key value="0" row="2567" interpolation="0"/>
-			<key value="1000" row="2568" interpolation="1"/>
-			<key value="0" row="2575" interpolation="0"/>
-			<key value="1000" row="2576" interpolation="1"/>
-			<key value="0" row="2583" interpolation="0"/>
-			<key value="1000" row="2584" interpolation="1"/>
-			<key value="0" row="2591" interpolation="0"/>
-			<key value="1000" row="2592" interpolation="1"/>
-			<key value="0" row="2599" interpolation="0"/>
-			<key value="1000" row="2600" interpolation="1"/>
-			<key value="0" row="2607" interpolation="0"/>
-			<key value="1000" row="2608" interpolation="1"/>
-			<key value="0" row="2615" interpolation="0"/>
-			<key value="1000" row="2616" interpolation="1"/>
-			<key value="0" row="2623" interpolation="0"/>
 		</track>
 		<track name="PostProc:GlowIntensity">
 			<key value="0.01" row="0" interpolation="0"/>
@@ -1720,22 +1688,6 @@
 			<key value="0.01" row="2367" interpolation="0"/>
 			<key value="0.2" row="2368" interpolation="1"/>
 			<key value="0.01" row="2375" interpolation="0"/>
-			<key value="0.2" row="2560" interpolation="1"/>
-			<key value="0.01" row="2567" interpolation="0"/>
-			<key value="0.2" row="2568" interpolation="1"/>
-			<key value="0.01" row="2575" interpolation="0"/>
-			<key value="0.2" row="2576" interpolation="1"/>
-			<key value="0.01" row="2583" interpolation="0"/>
-			<key value="0.2" row="2584" interpolation="1"/>
-			<key value="0.01" row="2591" interpolation="0"/>
-			<key value="0.2" row="2592" interpolation="1"/>
-			<key value="0.01" row="2599" interpolation="0"/>
-			<key value="0.2" row="2600" interpolation="1"/>
-			<key value="0.01" row="2607" interpolation="0"/>
-			<key value="0.2" row="2608" interpolation="1"/>
-			<key value="0.01" row="2615" interpolation="0"/>
-			<key value="0.2" row="2616" interpolation="1"/>
-			<key value="0.01" row="2623" interpolation="0"/>
 		</track>
 		<track name="PostProc:Distortion">
 			<key value="0.9" row="0" interpolation="0"/>
@@ -1774,6 +1726,12 @@
 		</track>
 		<track name="PostProc:FadeToWhite">
 			<key value="0" row="0" interpolation="0"/>
+			<key value="0.5" row="1600" interpolation="1"/>
+			<key value="0" row="1608" interpolation="0"/>
+			<key value="0.25" row="1664" interpolation="1"/>
+			<key value="0" row="1671" interpolation="0"/>
+			<key value="0.35" row="2496" interpolation="1"/>
+			<key value="0" row="2520" interpolation="0"/>
 		</track>
 		<track name="PostProc:LensEffect">
 			<key value="2" row="0" interpolation="0"/>
@@ -2086,22 +2044,7 @@
 			<key value="0" row="1527" interpolation="0"/>
 			<key value="0.05" row="1528" interpolation="1"/>
 			<key value="0" row="1535" interpolation="0"/>
-			<key value="0.05" row="1536" interpolation="1"/>
-			<key value="0" row="1543" interpolation="0"/>
-			<key value="0.05" row="1544" interpolation="1"/>
-			<key value="0" row="1551" interpolation="0"/>
-			<key value="0.05" row="1552" interpolation="1"/>
-			<key value="0" row="1559" interpolation="0"/>
-			<key value="0.05" row="1560" interpolation="1"/>
-			<key value="0" row="1567" interpolation="0"/>
-			<key value="0.05" row="1568" interpolation="1"/>
-			<key value="0" row="1575" interpolation="0"/>
-			<key value="0.05" row="1576" interpolation="1"/>
-			<key value="0" row="1583" interpolation="0"/>
-			<key value="0.05" row="1584" interpolation="1"/>
-			<key value="0" row="1591" interpolation="0"/>
-			<key value="0.05" row="1592" interpolation="1"/>
-			<key value="0" row="1599" interpolation="0"/>
+			<key value="0.2" row="1536" interpolation="0"/>
 			<key value="0.05" row="1600" interpolation="1"/>
 			<key value="0" row="1607" interpolation="0"/>
 			<key value="0.05" row="1608" interpolation="1"/>
@@ -2118,7 +2061,7 @@
 			<key value="0" row="1655" interpolation="0"/>
 			<key value="0.05" row="1656" interpolation="1"/>
 			<key value="0" row="1663" interpolation="0"/>
-			<key value="0.05" row="1664" interpolation="1"/>
+			<key value="0.1" row="1664" interpolation="1"/>
 			<key value="0" row="1671" interpolation="0"/>
 			<key value="0.05" row="1672" interpolation="1"/>
 			<key value="0" row="1679" interpolation="0"/>
@@ -2493,8 +2436,74 @@
 			<key value="0" row="2240" interpolation="1"/>
 			<key value="-3600" row="2496" interpolation="0"/>
 		</track>
-		<track name="fireTransition:fireSlide"/>
-		<track name="fireTransition:alpha"/>
+		<track name="fireTransition:fireSlide">
+			<key value="5" row="2496" interpolation="1"/>
+			<key value="0" row="2752" interpolation="0"/>
+		</track>
+		<track name="fireTransition:alpha">
+			<key value="5" row="2496" interpolation="0"/>
+		</track>
+		<track name="ColorCycle:Hue">
+			<key value="0" row="0" interpolation="1"/>
+			<key value="10" row="256" interpolation="1"/>
+			<key value="50" row="320" interpolation="1"/>
+			<key value="100" row="2999" interpolation="0"/>
+		</track>
+		<track name="ColorCycle:Saturation"/>
+		<track name="ColorCycle:Shift">
+			<key value="0" row="256" interpolation="1"/>
+			<key value="15" row="319" interpolation="0"/>
+			<key value="0" row="320" interpolation="0"/>
+		</track>
+		<track name="ColorCycle:Centerize">
+			<key value="0" row="0" interpolation="0"/>
+			<key value="0" row="320" interpolation="0"/>
+		</track>
+		<track name="System:systemY">
+			<key value="0" row="1728" interpolation="0"/>
+			<key value="-0.25" row="1744" interpolation="0"/>
+			<key value="-0.5" row="1760" interpolation="0"/>
+			<key value="-0.6" row="1776" interpolation="0"/>
+			<key value="-0.75" row="1792" interpolation="0"/>
+		</track>
+		<track name="System:systemYscale">
+			<key value="3" row="1728" interpolation="0"/>
+			<key value="2.5" row="1744" interpolation="0"/>
+			<key value="2" row="1760" interpolation="0"/>
+			<key value="1.5" row="1776" interpolation="0"/>
+			<key value="1" row="1792" interpolation="0"/>
+			<key value="0.75" row="1808" interpolation="0"/>
+			<key value="0.5" row="1824" interpolation="0"/>
+			<key value="0.25" row="1840" interpolation="0"/>
+			<key value="0.125" row="1856" interpolation="0"/>
+			<key value="0" row="1872" interpolation="0"/>
+			<key value="0" row="1984" interpolation="0"/>
+		</track>
+		<track name="System:systemYpikke">
+			<key value="3" row="1744" interpolation="0"/>
+			<key value="1" row="1760" interpolation="2"/>
+			<key value="3" row="1768" interpolation="2"/>
+			<key value="0.6" row="1776" interpolation="2"/>
+			<key value="3" row="1784" interpolation="2"/>
+			<key value="0.15" row="1792" interpolation="2"/>
+			<key value="3" row="1800" interpolation="2"/>
+			<key value="0" row="1808" interpolation="2"/>
+			<key value="3" row="1816" interpolation="2"/>
+			<key value="-0.2" row="1824" interpolation="2"/>
+			<key value="3" row="1832" interpolation="2"/>
+			<key value="-0.4" row="1840" interpolation="2"/>
+			<key value="3" row="1848" interpolation="3"/>
+			<key value="-0.4" row="1856" interpolation="2"/>
+			<key value="3" row="1864" interpolation="2"/>
+			<key value="-0.4" row="1872" interpolation="2"/>
+			<key value="0.4" row="1888" interpolation="2"/>
+			<key value="-0.4" row="1904" interpolation="2"/>
+			<key value="0.4" row="1920" interpolation="2"/>
+			<key value="-0.4" row="1936" interpolation="2"/>
+			<key value="0.4" row="1952" interpolation="2"/>
+			<key value="-0.4" row="1968" interpolation="2"/>
+			<key value="0.4" row="1984" interpolation="2"/>
+		</track>
 	</tracks>
 	<bookmarks>
 		<bookmark row="1088"/>

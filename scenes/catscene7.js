@@ -1,16 +1,25 @@
 Demo.prototype.sceneCat7 = function () {
     this.setScene('cat7');
-
       this.loader.addAnimation([{
-      image: { name: 'scenes/pikka1.png'},
+      image: { name: 'scenes/system.png'},
       perspective: '3d',
       position:[{
-        x:()=>Math.sin(getSceneTimeFromStart()*2),
-        y:()=>.5*Math.cos(getSceneTimeFromStart()*2)+getSceneTimeFromStart()%window.beat,
+        x:0,
+        y:()=>Sync.get('System:systemY'),
         z:0}],
-      scale:[{"uniform3d":()=>Sync.get('Foreground:scale2')}],
+      scale:[{"x":1.70, "y":()=>Sync.get('System:systemYscale')}],
       color:[{"r":1.0,"g":0.1,"b":0.1,"a":1.0}],
     }]);
+      this.loader.addAnimation([{
+      image: { name: 'scenes/bigpikka.png'},
+      perspective: '3d',
+      position:[{
+        x:0,
+        y:()=>Sync.get('System:systemYpikke'),
+        z:0}],
+      scale:[{"uniform3d":()=>Sync.get('Foreground:scale2')}],
+      color:[{"r":.5,"g":0.1,"b":.85,"a":1.0}],
+    }]);
 
-    this.basicText({text:"Meow",x:0,y:0,scale:6.0, start:0, duration: 100});
+
 }

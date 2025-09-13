@@ -138,7 +138,7 @@ Demo.prototype.sceneCat5 = function () {
           scale += Math.sin(i%2 + time * 20.0) * 0.1 * ((1.0-progress)+0.02);
         }
 
-
+        color.g = 0;
         object.scale.x = scale;
         object.scale.y = scale;
         object.scale.z = scale;
