@@ -1,6 +1,7 @@
 Demo.prototype.basicText = function (props)
 {
-  
+ 
+  if (props.scale == 6.0) { props.scale = 2.7;}
   if(props.a == undefined) props.a = 1.0;
   if(props.y == undefined) props.y = 0;
   this.loader.addAnimation([{
@@ -9,11 +10,11 @@ Demo.prototype.basicText = function (props)
       perspective:"3d", 
       color:[{"r":1.0,"g":1.0,"b":1.0,"a":props.a}],
       position:[{
-        x:0,
+        x:props.x||0,
         y:props.y,
         z:2},
        {duration:9},{y:0}],
-      scale: [{ uniform3d: 2.4 }],
+      scale: [{ uniform3d: props.scale||2.4 }],
     material:{
       blending: 'NormalBlending',
       transparent:true,
@@ -64,7 +65,7 @@ Demo.prototype.flashText = function (texts, start, dur)
           }
 
           window.currentlyVisible = animation.currentlyVisible;
-          console.log("currentlyVisible: " + window.currentlyVisible, " texts.length: " + texts.length);
+          //console.log("currentlyVisible: " + window.currentlyVisible, " texts.length: " + texts.length);
         }
         
 
@@ -73,6 +74,6 @@ Demo.prototype.flashText = function (texts, start, dur)
   for (let i=0; i<texts.length;i++)
   {
         let myVisible=i;
-        this.basicText({text:texts[i],x:0,y:0,start: start, duration:dur,scale:6.0, a:()=>(window.currentlyVisible == myVisible) ? 1.0 : 0.0});
+        this.basicText({text:texts[i],x:0,y:0,start: start, duration:dur,scale:2.4, a:()=>(window.currentlyVisible == myVisible) ? 1.0 : 0.0});
   }
 }

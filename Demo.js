@@ -138,9 +138,9 @@ includeFile('scenes/catscene8.js');
 includeFile('scenes/catscene9.js');
 includeFile('scenes/burnscene.js');
 includeFile('scenes/foreground.js');
+includeFile('scenes/meowscene.js');
 
 Demo.prototype.init = function () {
-    console.log('LOL:' + new Error('stackformat').stack);
     const start = 0;
     const duration = 180;
     const bpm = 120;
@@ -157,6 +157,7 @@ Demo.prototype.init = function () {
     this.sceneCat7();
     this.sceneCat8();
     this.sceneCat9();
+    this.sceneMeow();
     this.sceneBurn();
     this.sceneForeground();
 
@@ -164,7 +165,7 @@ Demo.prototype.init = function () {
 
     let overflow = 0.5;
     const scenes = [
-        { start: 0, duration: 120, name: 'background1', bg: true, },
+        { start: 0, duration: 129, name: 'background1', bg: true, },
         
         { start: 0, duration: 5*window.pattern, name: 'cat1', bg: false },
         { start: 5*window.pattern, duration: 4*window.pattern, name: 'cat2', bg: false },
@@ -176,6 +177,7 @@ Demo.prototype.init = function () {
         { start: 31*window.pattern, duration: 4*window.pattern, name: 'cat8', bg: false },
         { start: 35*window.pattern, duration: 8*window.pattern, name: 'cat9', bg: false },   
         { start: 43*window.pattern, duration: 4*window.pattern, name: 'burn', bg: false },   
+        { start: 39*window.pattern, duration: 5*window.pattern, name: 'meow', bg: false },   
         { start: 0, duration: 47*window.pattern, name: 'foreground', bg: false, },
         ];
 
