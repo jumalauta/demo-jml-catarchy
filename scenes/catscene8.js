@@ -58,10 +58,11 @@ Demo.prototype.sceneCat8 = function () {
         if(getSceneTimeFromStart() > animation.prevTime)
         {
           animation.prevTime = getSceneTimeFromStart()+.05;
-          animation.currentlyVisible++;
           animation.color[0].r = Math.random();
           animation.color[0].g = Math.random();
           animation.color[0].b = Math.random();
+        } else if (Math.abs(getSceneTimeFromStart()-animation.prevTime) > .5) {
+          animation.prevTime = 0;
         }
 
     },
